@@ -45,6 +45,7 @@ public:
 			}
 			cout << endl;
 		}
+		
 	}
 
 	void gausss()
