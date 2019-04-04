@@ -85,11 +85,11 @@ public:
 			sum = 0;
 		}
 
-		cout << "Норма = " << norm  << endl;
+		cout << "Norm = " << norm  << endl;
 		if (norm > 1)
 		{
-			cout << "Норма матрицы > 1" << endl;
-			cout << "Работа программы завершена!" << endl;
+			cout << "Norm matrix > 1" << endl;
+			cout << "The program is completed!" << endl;
 			system("pause");
 		}
 
@@ -113,7 +113,7 @@ public:
 		do
 		{
 			counter++;
-			cout << "Итерация № " << counter << endl << endl;
+			cout << "Iteration № " << counter << endl << endl;
 			for (int i = 0; i < size; i++)
 			{
 				x[i] = 0;
@@ -137,11 +137,11 @@ public:
 				cout << "X" << i + 1 << " = " << x[i] << " " << endl;
 			}
 			cout << endl;
-			cout << "Максимум по модулю = " << max << endl << endl;
+			cout << "Maximum modulo = " << max << endl << endl;
 		} while (max > epsilon);
-		cout << endl << "Далее максимум меньше, чем заданная точность \nРабота программы завершена" << endl << endl;
-		cout << endl << "Результат: \n";
-		cout << endl << "Количество итераций: " << counter << endl << endl;
+		cout << endl << "Further, the maximum is less than the specified accuracy\nThe program is completed!" << endl << endl;
+		cout << endl << "Result: \n";
+		cout << endl << "Number of iterations: " << counter << endl << endl;
 		for (int i = 0; i < size; i++)
 			cout << "X" << i + 1 << "=" << x[i] << " " << endl;
 		delete[] x;
@@ -165,7 +165,7 @@ public:
 		do
 		{
 			counter++;
-			cout << "Итерация № " << counter << endl << endl;
+			cout << "Iteration № " << counter << endl << endl;
 			for (int i = 0; i < size; i++) {
 				x[i] = array_2[i];
 				cout << "X" << i + 1 << " = " << x[i];
@@ -189,11 +189,11 @@ public:
 				cout << "X" << i + 1 << " = " << x[i] << " " << endl;
 			}
 			cout << endl;
-			cout << "Максимум по модулю = " << max << endl << endl;
+			cout << "Maximum modulo = " << max << endl << endl;
 		} while (max > epsilon);
-		cout << endl << "Далее максимум меньше, чем заданная точность \nРабота программы завершена" << endl << endl;
-		cout << endl << "Результат: \n";
-		cout << endl << "Количество итераций: " << counter << endl << endl;
+		cout << endl << "Further, the maximum is less than the specified accuracy\nThe program is completed!" << endl << endl;
+		cout << endl << "Result: \n";
+		cout << endl << "Number of iterations: " << counter << endl << endl;
 		for (int i = 0; i < size; i++)
 			cout << "X" << i + 1 << "=" << x[i] << " " << endl;
 		delete[] x;
@@ -206,16 +206,15 @@ public:
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	cout << "Приближенные методы решения СЛАУ \n";
 	matrix a;
-	cout << endl << "Матрица: \n" << endl;
+	cout << endl << "Matrix: \n" << endl;
 	a.Print();
 	a.transform();
-	cout << endl << "Преображенная матрица \n" << endl;
+	cout << endl << "Transformed Matrix\n" << endl;
 	a.Print();
 	cout << endl;
-	cout << endl << "Выберите метод!" << endl;
-	cout << endl << "1)Метод простых итераций \n\n2)Метод Зейделя" << endl;
+	cout << endl << "Choose method!" << endl;
+	cout << endl << "1)Fixed-point iteration\n\n2)Seidel method" << endl;
 	int choice;
 	cin >> choice;
 	if (choice == 1) {
