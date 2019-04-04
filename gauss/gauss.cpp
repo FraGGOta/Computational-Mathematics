@@ -35,7 +35,7 @@ public:
 		gs.close();
 	}
 
-	void print() //Вывод на экран
+	void print() 
 	{
 		for (int i = 0; i < size; i++)
 		{
@@ -45,14 +45,13 @@ public:
 			}
 			cout << endl;
 		}
-		
 	}
 
 	void gausss()
 	{
 		for (k = 0; k < size - 1; k++)
 		{
-			while (array[k][k] == 0) //Проверка на нули в диагонали
+			while (array[k][k] == 0)
 			{
 				int l, j;
 				l = k;
@@ -69,16 +68,16 @@ public:
 				}
 			}
 
-			for (int e = k + 1; e < size; e++) //Нули ниже главной диагонали
+			for (int e = k + 1; e < size; e++)
 			{
 				index = array[e][k] / array[k][k];
 				for (int l = 0; l < size + 1; l++)
 					array[e][l] = array[e][l] - array[k][l] * index;
-				cout << "Коэфф = " << index << endl;
+				cout << "Coeff = " << index << endl;
 			}
 			cout << endl;
 			
-			for (int i = 0; i < size; i++) //Вывод на экран
+			for (int i = 0; i < size; i++)
 			{
 				for (int j = 0; j < size + 1; j++)
 					cout << setw(9) << array[i][j] << " ";
@@ -92,7 +91,7 @@ public:
 	{
 		for (k = 0; k < size - 1; k++)
 		{
-			while (array[k][k] == 0) //Проверка на нули в диагонали
+			while (array[k][k] == 0)
 			{
 				int l, j;
 				l = k;
@@ -110,12 +109,12 @@ public:
 			}
 
 			c = k;
-			for (int i = k + 1; i < size; i++) //Выбираем строку с максимальным коэффициентом ai1 и меняем ее с первой.
+			for (int i = k + 1; i < size; i++)
 				if (abs(array[c][k]) < abs((array[i][k])))
 					c = i;
 
 			if (c != k) {
-				for (int i = 0; i < size + 1; i++) //Обмен строк
+				for (int i = 0; i < size + 1; i++)
 				{
 					buff = array[c][i];
 					array[c][i] = array[k][i];
@@ -123,16 +122,16 @@ public:
 				}
 			}
 
-			for (int e = k + 1; e < size; e++) //Нули ниже главной диагонали
+			for (int e = k + 1; e < size; e++)
 			{
 				index = array[e][k] / array[k][k];
 				for (int l = 0; l < size + 1; l++)
 					array[e][l] = array[e][l] - array[k][l] * index;
-				cout << "Коэфф = " << index  << endl;
+				cout << "Coeff = " << index  << endl;
 			}
 			cout << endl;
 
-			for (int i = 0; i < size; i++) //Вывод на экран
+			for (int i = 0; i < size; i++)
 			{
 				for (int j = 0; j < size + 1; j++)
 					cout << setw(9) << array[i][j] << " ";
@@ -144,14 +143,14 @@ public:
 
 	void inverse() 
 	{
-		for (int j = size - 1; j >= 0; j--) //Вычисление корней
+		for (int j = size - 1; j >= 0; j--)
 		{
 			root = array[j][size];
 			for (int i = j + 1; i < size; i++)
 				root = root - array[j][i] * x[i];
 			x[j] = root / array[j][j];
 		}
-		cout << "Корни СЛАУ:" << endl << endl;
+		cout << "Roots:" << endl << endl;
 		for (int i = 0; i < size; i++)
 			cout << "X" << i + 1 << " = " << x[i] << " " << endl;
 	}
@@ -159,12 +158,11 @@ public:
 	
 int main()
 {
-	setlocale(LC_ALL, "Russian");
 	gauss a;
-	cout << "Матрица:\n" << endl;
+	cout << "Matrix:\n" << endl;
 	a.print();
-	cout << "\n1)Метод Гаусса\n2)Модифицированный метод Гаусса" << endl;
-	cout << "Выберите метод: ";
+	cout << "\n1)Gauss Method\n2)Modified gauss method" << endl;
+	cout << "Select method: ";
 	int choice;
 	cin >> choice;
 	cout << endl;
