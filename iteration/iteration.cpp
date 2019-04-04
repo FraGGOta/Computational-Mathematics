@@ -47,6 +47,7 @@ public:
 			cout << " " << array_2[i] << endl;
 		}
 	}
+	
 	void transform()
 	{
 		double tmp = 0;
@@ -201,7 +202,6 @@ public:
 		delete[] E;
 	}
 };
-
 
 int main()
 {
