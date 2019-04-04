@@ -95,7 +95,7 @@ int main() {
 		cout << "The solution is over:  | " << c << " - " << c1 << " | / 2 <= 0,001";
 		cout << "\nAnswer: " << c << endl;
 	}
-	else
+	else 
 	{
 		cout << "\nNo solution";
 	}

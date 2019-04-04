@@ -110,6 +110,7 @@ double **matrix::inverse()
 			}
 		}
 	}
+	
 	for (int k = size - 1; k >= 0; k--) {
 		for (int i = k - 1; i >= 0; i--) {
 			q = t[i][k];

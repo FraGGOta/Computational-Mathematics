@@ -39,6 +39,7 @@ public:
 			}
 		}
 	}
+	
 	void show()
 	{
 		cout << endl;
