@@ -41,12 +41,12 @@ int main() {
 				
 				if (function(c) * function(b) < 0) 
 				{
-					cout << "\nf(a) * f(ñ) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
+					cout << "\nf(a) * f(c) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
 					cout << "f(c) * f(b) = " << function(c) << " * " << function(b) << " = " << function(c) * function(b) << endl << endl;
 					a = c;
 				}
 				else {
-					cout << "\nf(a) * f(ñ) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
+					cout << "\nf(a) * f(c) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
 					cout << "f(c) * f(b) = " << function(c) << " * " << function(b) << " = " << function(c) * function(b) << endl << endl;
 					b = c;
 				}
@@ -60,12 +60,12 @@ int main() {
 				
 				if (function(c) * function(b) < 0)
 				{
-					cout << "\nf(a) * f(ñ) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
+					cout << "\nf(a) * f(c) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
 					cout << "f(c) * f(b) = " << function(c) << " * " << function(b) << " = " << function(c) * function(b) << endl << endl;
 					a = c;
 				}
 				else {
-					cout << "\nf(a) * f(ñ) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
+					cout << "\nf(a) * f(c) = " << function(a) << " * " << function(c) << " = " << function(a) * function(c) << endl;
 					cout << "f(c) * f(b) = " << function(c) << " * " << function(b) << " = " << function(c) * function(b) << endl << endl;
 					b = c;
 				}
