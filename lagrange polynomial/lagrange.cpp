@@ -8,36 +8,43 @@ using namespace std;
 class lagrange
 {
 private:
+	double x;
 	double *x_values, *y_values;
 	int size;
+	ifstream f;
 public:
 	lagrange()
 	{
-		int size_1;
 		cout << "Lagrange polynomial:\n";
 		cout << "\nEnter the number of points: ";
 
-		x_values = new double[size]; 
+		f.open("point.txt");
+		f >> size;
+		x_values = new double[size];
 		y_values = new double[size];
 
-		for (int i = 0; i < size; i++) 
-		{
-			cout << "x[" << i + 1 << "] = ";
-			cin >> x_values[i];
-			cout << "y[" << i + 1 << "] = ";
-			cin >> y_values[i];
-		}
-	}
-	
-	void show()
-	{
-		cout << "\nx      y\n";
 		for (int i = 0; i < size; i++)
 		{
-			cout << x_values[i] << "      ";
-			cout << y_values[i] << "\n";
+			f >> x_values[i];
+			f >> y_values[i];
+		}
+		f >> x;
+		f.close();
+		
+	}
+	
+	void show() //Вывод на экран
+	{
+		cout << endl;
+		cout << "x";
+		cout << setw(9) << "y" << endl;
+		for (int i = 0; i < size; i++)
+		{
+			cout << x_values[i];
+			cout << setw(9) << y_values[i] << endl;
 		}
 		cout << endl;
+		cout << "x = " << x << endl << endl;
 	}
 
 	double InterpolateLagrangePolynomial()
