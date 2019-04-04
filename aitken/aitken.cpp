@@ -28,6 +28,7 @@ public:
 		f >> x;
 		f.close();
 	}
+	
 	void show()
 	{
 		cout << endl;
