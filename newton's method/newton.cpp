@@ -165,7 +165,7 @@ void matrix::iteration()
 	int k = 1;
 	do {
 		if (k >= 2) {
-			cout << endl << norm(x0) - norm(temp_x) << " >= " << E << endl;
+			cout << endl << fabs(norm(x0) - norm(temp_x)) << " >= " << E << endl;
 		}
 		cout << "\nIteratin ¹ " << k << endl << endl;
 		w = inverse();
@@ -179,11 +179,11 @@ void matrix::iteration()
 			}
 			cout << " = " << x0[i] << endl;
 		}
-		cout << "\nMaximum modulo: " << norm(x0) << " - " << norm(temp_x) << " = " << norm(x0) - norm(temp_x) << endl;
+		cout << "\nMaximum modulo: " << norm(x0) << " - " << norm(temp_x) << " = " << fabs(norm(x0) - norm(temp_x)) << endl;
 		k++;
-	} while (norm(x0) - norm(temp_x) >= E);
+	} while fabs((norm(x0) - norm(temp_x)) >= E);
 
-	cout << norm(x0) - norm(temp_x) << " < " << E;
+	cout << fabs(norm(x0) - norm(temp_x)) << " < " << E;
 	cout << "\n\nFurther, the maximum is less than the specified accuracy\nThe program is completed!" << endl << endl;
 	cout << "Result: \n";
 	for (int i = 0; i < size; i++)

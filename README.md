@@ -12,6 +12,8 @@
 + Интерполяция (формула Лагранжа) / (Lagrange polynomial)<br/>
 + Интерполяция (схема Эйткена) / (Aitken scheme)<br/>
 + Интерполяция (формула Ньютона) / (Newton polynomial)<br/>
++ Интерполяция кубическими сплайнами / (Spline interpolation)<br/>
++ Численное интегрирование / (Numerical integration)<br/>
 
 >Все работы были написаны на языке С++ с использованием ООП в программе 
 Microsoft Visual Studio 2017
