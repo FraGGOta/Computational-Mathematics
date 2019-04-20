@@ -88,7 +88,7 @@ public:
 					matrix[i][j] = h[i + 1] / 6;
 				else if (j == i - 1)
 					matrix[i][j] = h[i] / 6;
-				else if (fabs(i - j) > 1)
+				else if (abs(i - j) > 1)
 					matrix[i][j] = 0;
 				cout << setw(12) << matrix[i][j];
 			}

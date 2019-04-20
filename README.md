@@ -13,7 +13,9 @@
 + Интерполяция (схема Эйткена) / (Aitken scheme)<br/>
 + Интерполяция (формула Ньютона) / (Newton polynomial)<br/>
 + Интерполяция кубическими сплайнами / (Spline interpolation)<br/>
++ Тригонометрическая интерполяция / (Trigonometric interpolation)<br/>
 + Численное интегрирование / (Numerical integration)<br/>
++ Решение ДУ / (Differential equation)<br/>
 
 >Все работы были написаны на языке С++ с использованием ООП в программе 
 Microsoft Visual Studio 2017
