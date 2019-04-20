@@ -47,6 +47,7 @@ public:
 			cout << setw(7) << x_values[i] << "  ";
 			cout << setw(8) << y_values[i] << endl;
 		}
+
 		cout << endl;
 		cout << "x = " << x << endl;
 		cout << "h = " << x_values[1] << " - " << x_values[0] << " = " << h << endl << endl;
